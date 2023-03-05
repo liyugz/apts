@@ -1,0 +1,25 @@
+digraph "classes" {
+rankdir=BT
+charset="utf-8"
+"question.strategy.ChZiCi" [color="black", fontcolor="black", label="{ChZiCi|activator : ZiCiActivator\lmanual_range : NoneType\lrange_strategy : NoneType\lregister_name : str\lrender : ZiCiParenthesesZiCiDoubleTableRender\lset_strategy : NoneType\luser\l|execute()\lset_range_strategy(range_strategy, manual_range)\lset_set_strategy(set_strategy)\l}", shape="record", style="solid"];
+"question.strategy.MemoryContext" [color="black", fontcolor="black", label="{MemoryContext|\l|execute()\lset_range_strategy(strategy)\lset_set_strategy(set_strategy)\l}", shape="record", style="solid"];
+"question.strategy.RangeStrategy" [color="black", fontcolor="black", label="{RangeStrategy|\l|execute()\lget_former_items()\lget_item_description_field_name()\lget_item_id_field_name()\lget_item_node_list(data_to_be_converted, data_for_support)\lget_lesson_constraints()\lget_lesson_field_name()\lget_node_class()\lget_user()\lget_zici_by_lesson_constraints(lesson_constraints)\l}", shape="record", style="solid"];
+"question.strategy.SetStrategy" [color="black", fontcolor="black", label="{SetStrategy|\l|execute(item_data)\l}", shape="record", style="solid"];
+"question.strategy.ZiCiAutoRangeStrategy" [color="black", fontcolor="black", label="{ZiCiAutoRangeStrategy|\l|get_lesson_constraints()\l}", shape="record", style="solid"];
+"question.strategy.ZiCiEqualizationSetStrategy" [color="black", fontcolor="black", label="{ZiCiEqualizationSetStrategy|\l|get_item_data(item_data_raw)\l}", shape="record", style="solid"];
+"question.strategy.ZiCiManualRangeStrategy" [color="black", fontcolor="black", label="{ZiCiManualRangeStrategy|range_data : NoneType\l|get_lesson_constraints()\l}", shape="record", style="solid"];
+"question.strategy.ZiCiRangeStrategy" [color="black", fontcolor="black", label="{ZiCiRangeStrategy|user\l|get_former_items()\lget_item_description_field_name()\lget_item_id_field_name()\lget_lesson_constraints()\lget_lesson_field_name()\lget_node_class()\lget_user()\lget_zici_by_lesson_constraints(lesson_constraints)\l}", shape="record", style="solid"];
+"question.strategy.ZiCiRocketSetStrategy" [color="black", fontcolor="black", label="{ZiCiRocketSetStrategy|\l|get_item_data(item_data_raw)\l}", shape="record", style="solid"];
+"question.strategy.ZiCiSetStrategy" [color="black", fontcolor="black", label="{ZiCiSetStrategy|user\l|execute(item_data_raw)\lget_item_data(item_data_raw)\lget_item_max_num()\lget_ratio()\lget_user()\l}", shape="record", style="solid"];
+"question.strategy.ChZiCi" -> "question.strategy.MemoryContext" [arrowhead="empty", arrowtail="none"];
+"question.strategy.ZiCiAutoRangeStrategy" -> "question.strategy.ZiCiRangeStrategy" [arrowhead="empty", arrowtail="none"];
+"question.strategy.ZiCiEqualizationSetStrategy" -> "question.strategy.ZiCiSetStrategy" [arrowhead="empty", arrowtail="none"];
+"question.strategy.ZiCiManualRangeStrategy" -> "question.strategy.ZiCiRangeStrategy" [arrowhead="empty", arrowtail="none"];
+"question.strategy.ZiCiRangeStrategy" -> "question.strategy.RangeStrategy" [arrowhead="empty", arrowtail="none"];
+"question.strategy.ZiCiRocketSetStrategy" -> "question.strategy.ZiCiSetStrategy" [arrowhead="empty", arrowtail="none"];
+"question.strategy.ZiCiSetStrategy" -> "question.strategy.SetStrategy" [arrowhead="empty", arrowtail="none"];
+"question.strategy.ZiCiAutoRangeStrategy" -> "question.strategy.ChZiCi" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="range_strategy", style="solid"];
+"question.strategy.ZiCiEqualizationSetStrategy" -> "question.strategy.ChZiCi" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="set_strategy", style="solid"];
+"question.strategy.ZiCiManualRangeStrategy" -> "question.strategy.ChZiCi" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="range_strategy", style="solid"];
+"question.strategy.ZiCiRocketSetStrategy" -> "question.strategy.ChZiCi" [arrowhead="diamond", arrowtail="none", fontcolor="green", label="set_strategy", style="solid"];
+}

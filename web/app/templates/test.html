@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .form-group {
+      margin-top: 20px;
+    }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>抽签程序</h1>
+    <form>
+        <div class="form-group">
+            <label for="nameInput">请输入您的名字：</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="请输入名字">
+        </div>
+        <button type="submit" class="btn btn-primary">抽签</button>
+    </form>
+    <div id="result" style="margin-top: 20px;"></div>
+</div>
+
+<script>
+    $("form").submit(function (event) {
+      event.preventDefault();
+      var name = $("#nameInput").val();
+      var result = "恭喜 " + name + "，抽到了 " + Math.floor(Math.random() * 100) + " 号签。";
+
+
+        var arr = ['上', '下'];
+        var randomNum = Math.floor(Math.random() * arr.length);
+        var result = arr[randomNum];
+        $("#result").html(result);
+
+
+    });
+
+
+
+</script>
+
+</body>
+</html>

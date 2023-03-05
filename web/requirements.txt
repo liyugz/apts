@@ -1,0 +1,10 @@
+
+app 是 Flask 应用的目录。
+__init__.py 文件定义了 Flask 应用的初始化过程。
+views.py 文件定义了 Flask 应用的路由。
+models.py 文件定义了 Flask 应用的数据模型。
+static 目录用于存储静态文件，如图片、CSS 样式表和 JavaScript 脚本。
+templates 目录用于存储 HTML 模板。
+config.py 文件存储 Flask 应用的配置信息。
+run.py 文件定义了如何运行 Flask 应用。
+requirements.txt 文件记录了 Flask 应用所依赖的 Python 库。

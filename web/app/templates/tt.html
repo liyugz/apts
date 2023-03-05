@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+        function draw() {
+            var names = ['张三', '李四', '王五', '赵六', '孙七'];
+            var index = Math.floor(Math.random() * names.length);
+            document.getElementById('result').innerHTML = names[index];
+        }
+    </script>
+</head>
+<body>
+    <button onclick="draw()">抽签</button>
+    <div id="result"></div>
+</body>
+</html>
