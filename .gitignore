@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+学习笔记
 
 # Spyder project settings
 .spyderproject
