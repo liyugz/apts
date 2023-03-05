@@ -12,8 +12,8 @@ import pandas as pd
 class DBConnector:
     def __init__(self):
         # 创建数据库引擎
-        # self.engine = create_engine(r'mysql+pymysql://root:password@localhost:3306/apts?charset=utf8')
-        self.engine = create_engine(r'mysql+pymysql://root_ly:password@120.55.48.49:3306/apts?charset=utf8')
+        self.engine = create_engine(r'mysql+pymysql://root:password@localhost:3306/apts?charset=utf8')
+        # self.engine = create_engine(r'mysql+pymysql://root_ly:password@120.55.48.49:3306/apts?charset=utf8')
 
         # 创建会话
         self.Session = sessionmaker(bind=self.engine)

@@ -104,7 +104,7 @@ def download(username):
     return send_file(file_path, as_attachment=True)
 
 
-@app.route("/download_score/<username>")
+@app.route("/download_pdf/<username>")
 def download_pdf(username):
     user = User(username)
     paper_path = user.current_info['paper_path']
